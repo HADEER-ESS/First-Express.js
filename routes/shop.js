@@ -1,10 +1,10 @@
 const express = require('express');
+const { getAllProducts } = require("../controller/getAllProducts")
 
 const router = express.Router()
 
-router.get("/product" ,(req, res, next)=>{
-    res.send(`<h1> Shop Rounter </h1>`)
-})
+router.get("/products" , getAllProducts)
+
 
 
 module.exports = router
